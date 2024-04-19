@@ -19,6 +19,7 @@ body {
     height: 100vh;
     margin: auto;
     position: relative;
+    overflow: hidden;
 }
 
 .filter-green {
@@ -209,20 +210,17 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-    body {
-        overflow-x: hidden;
-    }
 
     .menu {
-        display: block;
-        position: absolute;
+        overflow: hidden;
+        position: fixed;
         top: 0;
         right: -100%;
         bottom: 0;
         background-color: var(--primary-color);
         min-width: 40%;
         z-index: 1;
-        transition: right 0.3s ease;
+        transition: right 0.5s ease;
     }
 
     .menu.open {
